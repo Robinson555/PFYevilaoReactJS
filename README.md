@@ -10,9 +10,6 @@ README
 
 -------------
 
-::: primary
-✨ Create alerts
-:::
 
 - Para interactuar con el proyecto puedes clonar el repositorio con el comando `git clone https://github.com/Robinson555/PFYevilaoReactJS.git C:\Usuarios\usuario-pc\Documentos\` donde debe ir la dirección del repositorio de Github y luego la ruta donde quieres que se guarde el repositorio clonado. O puedes descargar el archivo desde el boton <CODE> > Download Zip :
 
