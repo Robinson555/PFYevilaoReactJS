@@ -24,18 +24,18 @@ luego `npm run dev` para ejecutar el proyecto.
 
 #### Página E-comerce
 
-- Realiza un compra, agrega mas de un producto y visualiza el total de productos agregados.
-- Para finalizar la compra debes ir al carrito y seguir los pasos que se indican, ingresar tus datos para generar el comprobante de compra.
-- Una vez completado lo requerido tu compra estara lista.
-
-::: info
- ✨ ¡Felicidades, has realizado una compra! ✨
-:::
-
+> Realiza un compra, agrega mas de un producto y visualiza el total de productos agregados.
 ---
+> Para finalizar la compra debes ir al carrito y seguir los pasos que se indican, ingresar tus datos para generar el comprobante de compra.
+---
+> Una vez completado lo requerido tu compra estara lista.
+
+ ✨ ¡Felicidades, has realizado una compra! ✨
+
+
 
 ##### Trayectoria Academica del curso.
 
-> Realice un e-comerce enfocado a la vestimenta por el motivo de que para mi me es llamativo la forma de implementar React al area de ventas, donde hay productos y se delimitan categorias, hay variaciones de stock entre otras razones más.
+- Realice un e-comerce enfocado a la vestimenta por el motivo de que para mi me es llamativo la forma de implementar React al area de ventas, donde hay productos y se delimitan categorias, hay variaciones de stock entre otras razones más.
 
-> Agradecimientos a los tutores y profesor los cuales dedicaron gran parte de su tiempo a enseñar y despejar dudas sobre las clases.
+- Agradecimientos a los tutores y profesor los cuales dedicaron gran parte de su tiempo a enseñar y despejar dudas sobre las clases.
