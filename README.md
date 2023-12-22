@@ -22,7 +22,7 @@ luego `npm run dev` para ejecutar el proyecto.
 
 
 
-####Página E-comerce
+#### Página E-comerce
 
   - Realiza un compra, agrega mas de un producto y visualiza el total de productos agregados.
 ---
