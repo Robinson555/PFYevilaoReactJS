@@ -1,0 +1,15 @@
+.mensajeHome{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center; 
+    height: 100vh; 
+    min-height: 100vh;
+    background-color: rgb(218, 212, 212);
+    color: rgb(56, 61, 57);
+    font-size: 3rem;
+    font-family: pacific;
+    border-radius: 30px;
+    margin: auto;
+    height: 600px;
+}
