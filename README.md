@@ -13,18 +13,21 @@ README
 
 - Para interactuar con el proyecto puedes clonar el repositorio con el comando 
 > `git clone https://github.com/Robinson555/PFYevilaoReactJS.git C:\Usuarios\usuario-pc\Documentos\`
+---
 donde debe ir la dirección del repositorio de Github y luego la ruta donde quieres que se guarde el repositorio clonado. O puedes descargar el archivo desde el boton 
-> `<CODE> > Download Zip` :
+> <CODE> > Download Zip
   
 - ![Imagen del Logo](https://github.com/Robinson555/PFYevilaoReactJS/blob/main/public/Capturas/downloadzip.png).
 
 
 - Una vez descargado y/o clonado el repositorio, abre el proyecto en tu editor de codigo, verifica que estes en la ruta donde estan las
 dependencias del proyecto y ejecuta el comando 
-> `npm install`  
+> `npm install`
+---
 para poder instalar las dependencias del proyecto y
 luego 
-> `npm run dev` 
+> `npm run dev`
+---
 para ejecutar el proyecto.
 
 
