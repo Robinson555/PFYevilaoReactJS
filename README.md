@@ -12,7 +12,6 @@ README
 
 
 - Para interactuar con el proyecto puedes clonar el repositorio con el comando `git clone https://github.com/Robinson555/PFYevilaoReactJS.git C:\Usuarios\usuario-pc\Documentos\` donde debe ir la dirección del repositorio de Github y luego la ruta donde quieres que se guarde el repositorio clonado. O puedes descargar el archivo desde el boton <CODE> > Download Zip :
-
   
 - ![Imagen del Logo](https://github.com/Robinson555/PFYevilaoReactJS/blob/main/public/Capturas/downloadzip.png).
 
@@ -23,13 +22,13 @@ luego `npm run dev` para ejecutar el proyecto.
 
 
 
-### Página E-comerce
+####Página E-comerce
 
-> Realiza un compra, agrega mas de un producto y visualiza el total de productos agregados.
+  - Realiza un compra, agrega mas de un producto y visualiza el total de productos agregados.
 ---
-> Para finalizar la compra debes ir al carrito y seguir los pasos que se indican, ingresar tus datos para generar el comprobante de compra.
+  - Para finalizar la compra debes ir al carrito y seguir los pasos que se indican, ingresar tus datos para generar el comprobante de compra.
 ---
-> Una vez completado lo requerido tu compra estara lista.
+  - Una vez completado lo requerido tu compra estara lista.
 
  ✨ ¡Felicidades, has realizado una compra! ✨
 
