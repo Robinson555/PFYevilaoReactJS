@@ -63,8 +63,8 @@ export const Order = () => {
     if (isSubmitting && orderId) {
         return (
             <div className={styles.order}>
-                <h3>¡Muchas gracias por tu compra!</h3>
-                <p>Tu código de orden es: {orderId}</p>
+                <h3> ¡Muchas gracias por tu compra! </h3>
+                <p> Tu código de orden es: {orderId} </p>
             </div>
         )
     }
