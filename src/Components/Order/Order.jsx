@@ -64,7 +64,7 @@ export const Order = () => {
         return (
             <div className={styles.order}>
                 <h3> ¡Muchas gracias por tu compra! </h3>
-                <p> Tu código de orden es: {orderId} </p>
+                <p> Tu código de orden es: <span>{orderId}</span> </p>
             </div>
         )
     }

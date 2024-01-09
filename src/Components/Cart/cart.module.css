@@ -10,7 +10,7 @@
 
 .cartdet {
     display: flex;
-    flex-wrap: wrap; /* Permitir envolver en filas */
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -50,6 +50,7 @@
     color: white;
     background-color: rgb(60, 88, 72);
     padding: 8px;
+    border-radius: 20px;
     cursor: pointer;
 }
 
@@ -62,6 +63,7 @@
     font-size: 18px;
     margin: auto;
     cursor: pointer;
+    border-radius: 20px;
 }
 
 .total {

@@ -2,7 +2,7 @@ import styles from "./button.module.css"
 
 export const Button = () => {
     return (
-        <button className={styles.button}>Detalle</button>
+        <button className={styles.button}>Detalles del Producto</button>
     )
 }
 

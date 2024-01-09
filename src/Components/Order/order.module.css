@@ -40,12 +40,14 @@
     cursor: pointer;
 }
 
-.order{
+.order {
+    width: 500px;
+    margin: 50px auto; 
     text-align: center;
-    /* border: solid 1px silver; */
-    margin-top: 50px;
-    padding-inline: 50px;
-    padding-block: 15px;
+    border: 2px solid #333; 
+    border-radius: 10px; 
+    padding: 15px 50px; 
+    box-shadow: 7px 7px 4px rgba(0, 128, 0, 0.1);
 }
 
 .order h3{
@@ -54,6 +56,10 @@
 }
 
 .order p{
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
+}
+.order span{
+    font-size: 30px;
+    font-weight: 700;
 }
