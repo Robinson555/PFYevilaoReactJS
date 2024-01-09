@@ -1,21 +1,54 @@
+import { useContext } from "react";
 import { ItemCount } from "../ItemCount/ItemCount";
+import styles from "./itemdetail.module.css";
+import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
+import Swal from 'sweetalert2';
 
-export const ItemDetail = ({ name, description, img, price, stock }) => {
+export const ItemDetail = ({ id, name, img, price, stock, description }) => {
+    const { addItem } = useContext(CartContext);
+
     const onAdd = (items) => {
-        alert(`Se agregaron ${items} al carrito`);
+        addItem(
+            {
+                id,
+                name,
+                description,
+                img,
+                price,
+                stock,
+            },
+            items
+        );
+        Swal.fire({
+            position: "top-end",
+            titleText: "Producto Agregado!",
+            showConfirmButton: false,
+            timer: 1500,
+        });
     };
 
     return (
-        <div className="border m-2">
-            <div className="card ">
-                <div className="card-body text-center">
-                    <h5 className="card-title">{name}</h5>
-                    <img src={img} className="img-fluid w-50 mx-auto my-3" alt="" />
-                    <p className="card-text"> {description} </p>
-                    <p>Precio: {price} </p>
-                    <ItemCount stock={stock} onAdd={onAdd} />
+        <>
+            <div className={styles.itemDetail}>
+                <div className={styles.itemDetail_cart}>
+                    <img className={styles.itemDetail_img} src={img} alt="" />
+                    <div className={styles.itemDetail_info}>
+                        <h1 className={styles.itemDetail_title}>{name}</h1>
+                        <p className={styles.itemDetail_des}>"{description}"</p>
+                        <p className={styles.itemDetail_price}>${price}</p>
+                        <p className={styles.itemDetail_stock}>Stock disponible: {stock}</p>
+                    </div>
+                    <div className={styles.itemDetail_count}>
+                        <ItemCount stock={stock} onAdd={onAdd} />
+                    </div>
                 </div>
             </div>
-        </div>
+            <div className={styles.buttonContainer}>
+                <Link to="/cart">
+                    <button className={styles.button}> Finalizar Compra</button>
+                </Link>
+            </div>
+        </>
     );
 };

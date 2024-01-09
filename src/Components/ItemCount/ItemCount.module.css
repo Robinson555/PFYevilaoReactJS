@@ -1,6 +1,33 @@
-.btn{
-    margin: 5px 5px 5px 5px;
+.title {
+    user-select: none !important;
 }
 
+.itemCount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 1px rgb(146, 135, 135);
+    cursor: pointer;
+    gap: 25px;
+    margin-block: 1rem;
+    padding: 10px; 
+    border-radius: 8px;
+}
 
+.operator {
+    font-size: 25px;
+    background-color: silver;
+    padding: 5px 15px;
+}
 
+.agregarAlCarrito {
+    background-color: rgb(58, 128, 81);
+    color: white;
+    font-weight: 500;
+    padding: 5px;
+    width: 100%;
+    border: none; 
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}

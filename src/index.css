@@ -1,0 +1,9 @@
+
+
+.title {
+    user-select: none !important;
+}
+
+.disable-select {
+    user-select: none;
+  }

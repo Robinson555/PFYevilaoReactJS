@@ -1,3 +1,11 @@
+.title {
+    user-select: none;
+}
+
+.disable-select {
+    user-select: none;
+  }
+  
 .mensajeHome{
     display: flex;
     text-align: center;
@@ -12,4 +20,13 @@
     border-radius: 30px;
     margin: auto;
     height: 600px;
+}
+
+.loading{
+    color: black;
+    text-align: center;
+    padding-top: 45vh;
+    padding-bottom: 50vh;
+    font-size: 20px;
+    font-weight: 500;
 }

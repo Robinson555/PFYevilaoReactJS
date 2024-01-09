@@ -1,18 +1,16 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+import { Button } from "../Button/Button"
+import styles from "./item.module.css"
 
-export const Item = ({ id, name, img, description }) => {
+export const Item = ({ id, name, price, img }) => {
     return (
-        <div className="border m-2 col-6 col-md-4 col-lg-3">
-            <div className="card">
-                <div className="card-body">
-                    <h5 className="card-title">{name}</h5>
-                    <img src={img} className="img-fluid w-100 mx-auto my-3" alt="" />
-                    <p className="card-text">{description}</p>
-                    <Link to={`/item/${id}`}>
-                        <button className="btn btn-outline-success">Detalles</button>
-                    </Link>
-                </div>
-            </div>
+        <div className={styles.item}>
+            <img src={img} alt="gorra" />
+            <h4>{name}</h4>
+            <p className={styles.item_price}>${price}</p>
+            <Link to={`/item/${id}`}>
+                <Button />
+            </Link>
         </div>
-    );
-};
+    )
+}

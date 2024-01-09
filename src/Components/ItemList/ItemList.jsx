@@ -1,16 +1,10 @@
-import { Item } from "../Item/Item";
-import "./ItemList.css";
+import { Item } from "../Item/Item"
+import styles from "./itemlist.module.css"
 
 export const ItemList = ({ products }) => {
     return (
-        <>
-            <div>
-                <div className="container">
-                    {products.map((products) => (
-                        <Item key={products.id} {...products} />
-                    ))}
-                </div>
-            </div>
-        </>
-    );
-};
+        <div className={styles.itemList}>
+            {products.map(product => <Item key={product.id} {...product} />)}
+        </div>
+    )
+}

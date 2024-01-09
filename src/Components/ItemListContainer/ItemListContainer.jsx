@@ -1,32 +1,36 @@
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../config/firebaseConfig";
 import { useEffect, useState } from "react";
-import { getProducts } from "../../asyncMock.js";
 import { ItemList } from "../ItemList/ItemList.jsx";
 import { useParams } from "react-router-dom";
+import styles from "./itemlistcontainer.module.css";
 
 export const ItemListContainer = () => {
     const { category } = useParams();
-
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState([])
     const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {
-        setIsLoading(true);
-        getProducts()
-            .then((resp) => {
-                if (category) {
-                    const productsFilter = resp.filter((product) => product.category === category);
-                    if (productsFilter.length > 0) {
-                        setProducts(productsFilter);
-                    } else {
-                        setProducts(resp);
-                    }
-                } else {
-                    setProducts(resp);
+    const getProductsDB = (category) => {
+        const myProducts = category ?
+            query(collection(db, "products"),
+                where("category", "==", category)) : query(collection(db, "products"))
+        getDocs(myProducts)
+            .then(resp => {
+                if (resp.size === 0) {
+                    console.log("No hay productos en la base de datos");
                 }
-                setIsLoading(false);
+                const productList = resp.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
+                setProducts(productList)
+                setIsLoading(false)
             })
-            .catch((error) => console.log(error));
-    }, [category]);
+            .catch(error => console.log(error))
+    }
 
-    return <>{isLoading ? <h3>Cargando Productos, espere unos segundo...</h3> : <ItemList products={products} />}</>;
-};
+    useEffect(() => {
+        getProductsDB(category)
+    }, [category])
+
+    return (
+        <>{isLoading ? <div className={styles.loading}><i className="fa-solid fa-spinner fa-spin"></i><span> Cargando</span></div> : <ItemList products={products} />}</>
+    )
+}
