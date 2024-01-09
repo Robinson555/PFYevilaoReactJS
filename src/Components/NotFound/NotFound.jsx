@@ -21,7 +21,7 @@ const NotFound = () => {
                     alt="Not Found"
                     style={{ maxWidth: '950px' }}
                 />
-                <h2 className="text-danger mb-3">Oops! Página no encontrada</h2>
+                <h2 className="text-danger mb-3">Página no encontrada</h2>
                 <p className="lead mb-3">Lo sentimos, la página que estás buscando no existe.</p>
                 <Link to="/" className="btn btn-primary mb-3">
                     Ir a la página principal

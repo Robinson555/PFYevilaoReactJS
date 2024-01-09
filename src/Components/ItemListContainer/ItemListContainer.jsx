@@ -21,7 +21,7 @@ export const ItemListContainer = () => {
             .then((resp) => {
                 if (resp.size === 0) {
                     console.log("No hay productos en la base de datos");
-                    // Redirige a la página NotFound si no hay productos en la categoría
+                    // Redireccionara a la página NotFound si no hay productos validos en la categoría
                     navigate('/notfound');
                     return;
                 }

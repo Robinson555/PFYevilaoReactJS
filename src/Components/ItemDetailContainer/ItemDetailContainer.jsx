@@ -3,27 +3,24 @@ import { useEffect, useState } from "react";
 import { db } from "../../config/firebaseConfig";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams, useNavigate } from "react-router-dom";
-import styles from "./itemdetailcontainer.module.css"
+import styles from "./itemdetailcontainer.module.css";
 import Swal from 'sweetalert2';
 
-
 export const ItemDetailContainer = () => {
-    const { id } = useParams()
-
-    const navigate = useNavigate()
-
+    const { id } = useParams();
+    const navigate = useNavigate();
     const [item, setItem] = useState();
-
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        setIsLoading(true)
         const fetchData = async () => {
+            setIsLoading(true);
             try {
-                const itemRef = doc(db, "products", id)
-                const docItem = await getDoc(itemRef)
+                const itemRef = doc(db, "products", id);
+                const docItem = await getDoc(itemRef);
+
                 if (docItem.exists()) {
-                    setItem({ id: docItem.id, ...docItem.data() })
+                    setItem({ id: docItem.id, ...docItem.data() });
                 } else {
                     Swal.fire({
                         title: "Producto no Encontrado!",
@@ -35,16 +32,19 @@ export const ItemDetailContainer = () => {
             } catch (error) {
                 console.log(error);
             }
-            setIsLoading(false)
-        }
+            setIsLoading(false);
+        };
 
-        fetchData()
-    }, [id])
+        fetchData();
+    }, [id, navigate]);
 
     return (
         <div className={styles.detail}>
-            {isLoading ? <div className={styles.loading}><i className="fa-solid fa-spinner fa-spin"></i><span> Cargando</span></div> : item && <ItemDetail {...item} />}
+            {isLoading ? (
+                <div className={styles.loading}>
+                    <i className="fa-solid fa-spinner fa-spin"></i><span> Cargando</span>
+                </div>
+            ) : item && <ItemDetail {...item} />}
         </div>
-    )
-
-}
+    );
+};
