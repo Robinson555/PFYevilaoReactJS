@@ -23,10 +23,21 @@ export const Order = () => {
             data: serverTimestamp(),
             total
         }
-
-        const getOrder = await addDoc(collection(db, "orders"), newOrder)
-        setOrderId(getOrder.id)
+    
+        try {
+            const getOrder = await addDoc(collection(db, "orders"), newOrder)
+            setOrderId(getOrder.id)
+        } catch (error) {
+            console.error("Error al agregar la orden a la base de datos", error);
+            
+            Swal.fire({
+                title: "Error al procesar la orden",
+                text: "Por favor, inténtalo de nuevo más tarde",
+                icon: "error",
+            });
+        }
     }
+    
 
     const handleForm = (e) => {
         e.preventDefault()

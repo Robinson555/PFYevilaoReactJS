@@ -1,14 +1,19 @@
 import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../../config/firebaseConfig";
-import { ItemDetail } from "../ItemDetail/ItemDetail";
-import { useParams } from "react-router-dom";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams, useNavigate } from "react-router-dom";
 import styles from "./itemdetailcontainer.module.css"
+import Swal from 'sweetalert2';
 
 
 export const ItemDetailContainer = () => {
     const { id } = useParams()
+
+    const navigate = useNavigate()
+
     const [item, setItem] = useState();
+
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
@@ -23,6 +28,8 @@ export const ItemDetailContainer = () => {
                     Swal.fire({
                         title: "Producto no Encontrado!",
                         icon: "error",
+                    }).then(() => {
+                        navigate('/notfound');
                     });
                 }
             } catch (error) {
