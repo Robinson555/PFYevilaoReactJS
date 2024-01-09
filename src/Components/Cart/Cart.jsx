@@ -22,7 +22,6 @@ export const Cart = () => {
                                 <p className={styles.subtotal}>Subtotal: ${item.subtotal}</p>
                                 <button className={styles.removeItem} onClick={() => removeItem(item.id)}>Eliminar Producto</button>
                             </div>
-                            <hr />
                         </div>
                     ))}
                 </div>
