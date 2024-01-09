@@ -13,7 +13,7 @@ README
 
 - donde debe ir la dirección del repositorio de Github y luego la ruta donde quieres que se guarde el repositorio clonado. O puedes descargar el archivo como lo mustra la captura:
 
-- ![Imagen del Logo]https://github.com/Robinson555/PFYevilaoReactJS/blob/main/public/Capturas/downloadzip.png).
+![Imagen del Logo]https://github.com/Robinson555/PFYevilaoReactJS/blob/main/public/Capturas/downloadzip.png).
 
 - Una vez descargado y/o clonado el repositorio, abre el proyecto en tu editor de codigo, verifica que estes en la ruta donde estan las dependencias del proyecto y ejecuta el comando:
 > npm install
